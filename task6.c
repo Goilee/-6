@@ -63,6 +63,10 @@ int main(int argc, char** argv)
 	}
 
 	FILE *file = fopen("graph.txt", "w");
+	if (!file)
+	{
+		return 0;  // TODO error message
+	}
 	for (int k = -50; k < 50; k++)
 	{
 		double p = k * M_PI / 48;
